@@ -16,17 +16,13 @@ class add_address_book(unittest.TestCase):
         self.wd.implicitly_wait(60)
     
     def test_add_address_book(self):
-        self.open_home_page()
         self.login(username="admin", password="secret")
-        self.open_address_book_page()
         self.create_address_book(Group(firstname="Ivan", lastname="Ivanov", title="QA Engineer", company="Google", address="123 main street", homephone="123456", cellphone="1234567",
                                  email="test@mail.com"))
         self.logout()
 
     def test_empty_add_address_book(self):
-        self.open_home_page()
         self.login(username="admin", password="secret")
-        self.open_address_book_page()
         self.create_address_book(Group(firstname="", lastname="", title="", company="", address="", homephone="", cellphone="",
                                  email=""))
         self.logout()
@@ -36,6 +32,7 @@ class add_address_book(unittest.TestCase):
         wd.find_element_by_link_text("Logout").click()
 
     def create_address_book(self, group):
+        self.open_address_book_page()
         wd = self.wd
         # fill in the form
         wd.find_element_by_name("firstname").click()
@@ -70,6 +67,7 @@ class add_address_book(unittest.TestCase):
         wd.find_element_by_link_text("add new").click()
 
     def login(self, username, password):
+        self.open_home_page()
         wd = self.wd
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
