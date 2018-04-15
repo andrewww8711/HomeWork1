@@ -16,27 +16,27 @@ class add_address_book(unittest.TestCase):
         self.wd.implicitly_wait(60)
     
     def test_add_address_book(self):
-        wd = self.wd
-        self.open_home_page(wd)
-        self.login(wd, username="admin", password="secret")
-        self.open_address_book_page(wd)
-        self.create_address_book(wd, Group(firstname="Ivan", lastname="Ivanov", title="QA Engineer", company="Google", address="123 main street", homephone="123456", cellphone="1234567",
+        self.open_home_page()
+        self.login(username="admin", password="secret")
+        self.open_address_book_page()
+        self.create_address_book(Group(firstname="Ivan", lastname="Ivanov", title="QA Engineer", company="Google", address="123 main street", homephone="123456", cellphone="1234567",
                                  email="test@mail.com"))
-        self.logout(wd)
+        self.logout()
 
     def test_empty_add_address_book(self):
-        wd = self.wd
-        self.open_home_page(wd)
-        self.login(wd, username="admin", password="secret")
-        self.open_address_book_page(wd)
-        self.create_address_book(wd, Group(firstname="", lastname="", title="", company="", address="", homephone="", cellphone="",
+        self.open_home_page()
+        self.login(username="admin", password="secret")
+        self.open_address_book_page()
+        self.create_address_book(Group(firstname="", lastname="", title="", company="", address="", homephone="", cellphone="",
                                  email=""))
-        self.logout(wd)
+        self.logout()
 
-    def logout(self, wd):
+    def logout(self):
+        wd = self.wd
         wd.find_element_by_link_text("Logout").click()
 
-    def create_address_book(self, wd, group):
+    def create_address_book(self, group):
+        wd = self.wd
         # fill in the form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -65,10 +65,12 @@ class add_address_book(unittest.TestCase):
         # submit the form
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
-    def open_address_book_page(self, wd):
+    def open_address_book_page(self):
+        wd = self.wd
         wd.find_element_by_link_text("add new").click()
 
-    def login(self, wd, username, password):
+    def login(self, username, password):
+        wd = self.wd
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(username)
@@ -77,7 +79,8 @@ class add_address_book(unittest.TestCase):
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
-    def open_home_page(self, wd):
+    def open_home_page(self):
+        wd = self.wd
         wd.get("http://localhost/addressbook/")
 
     def tearDown(self):
