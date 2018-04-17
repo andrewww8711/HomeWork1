@@ -1,4 +1,4 @@
-class Group:
+class Contact:
     def __init__(self, firstname, lastname, title, company, address, homephone, cellphone, email):
         self.firstname = firstname
         self.lastname = lastname
