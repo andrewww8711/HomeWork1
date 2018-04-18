@@ -9,18 +9,6 @@ class Application:
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
 
-
-    def login(self, username, password):
-        self.open_home_page()
-        wd = self.wd
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(username)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
-
     def create_address_book(self, contact):
         self.open_address_book_page()
         wd = self.wd
@@ -55,11 +43,6 @@ class Application:
     def open_address_book_page(self):
         wd = self.wd
         wd.find_element_by_link_text("add new").click()
-
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Logout").click()
-
 
 
     def destroy(self):
