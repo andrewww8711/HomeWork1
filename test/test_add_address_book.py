@@ -5,6 +5,7 @@ from model.contact import Contact
 def test_add_address_book(app):
         app.contact.create_address_book(Contact(firstname="John", lastname="Smith", title="QA Engineer", company="AAA", address="123 main street", homephone="123456", cellphone="1234567",
                                         email="test@mail.com"))
+        app.session.logout()
 
 
 def test_empty_add_address_book(app):
