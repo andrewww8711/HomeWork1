@@ -4,8 +4,9 @@ class ContactHelper:
         self.app = app
 
     def create_address_book(self, contact):
-        self.open_address_book_page()
         wd = self.app.wd
+        self.open_home_page()
+        self.open_address_book_page()
         self.fill_contact_form(contact)
         # submit the form
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
@@ -41,12 +42,12 @@ class ContactHelper:
         self.edit_first_contact()
         # modify contact form
         self.fill_contact_form(new_group_data)
-
         # submit the form
         wd.find_element_by_xpath(".//*[@id='content']/form[1]/input[22]").click()
 
     def edit_first_contact(self):
         wd = self.app.wd
+        self.open_address_book_page()
         wd.find_element_by_xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
 
     def open_address_book_page(self):
@@ -55,7 +56,8 @@ class ContactHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_class("left")) > 0):
+            wd.find_element_by_link_text("home").click()
 
     def count(self):
         wd = self.app.wd
