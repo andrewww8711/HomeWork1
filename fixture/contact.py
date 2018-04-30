@@ -47,7 +47,6 @@ class ContactHelper:
 
     def edit_first_contact(self):
         wd = self.app.wd
-        self.open_address_book_page()
         wd.find_element_by_xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
 
     def open_address_book_page(self):
