@@ -55,7 +55,7 @@ class ContactHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_class("left")) > 0):
+        if not (wd.current_url.endswith("addressbook/") and len(wd.find_elements_by_css_selector(".left input[value='Send e-Mail']")) > 0):
             wd.find_element_by_link_text("home").click()
 
     def count(self):
