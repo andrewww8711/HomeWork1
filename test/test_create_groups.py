@@ -6,9 +6,8 @@ def test_homeworkone(app):
         old_groups = app.group.get_group_list()
         group = Group(name="group name", header="header name", footer="footer name")
         app.group.create(group)
-        #app.group.create(Group(name="group name", header="header name", footer="footer name"))
+        assert len(old_groups) + 1 == app.group.count()
         new_groups = app.group.get_group_list()
-        assert len(old_groups) + 1 == len(new_groups)
         old_groups.append(group)
         assert sorted(old_groups, key=Group.id_id_max) == sorted(new_groups, key=Group.id_id_max)
 
