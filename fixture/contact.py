@@ -48,22 +48,22 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
 
-
-
-    def modify_first_contact(self, new_group_data):
+    def modify_contact_by_index(self, index, new_group_data):
         wd = self.app.wd
         self.open_home_page()
-        self.edit_first_contact()
+        self.edit_random_contact(index)
         # modify contact form
         self.fill_contact_form(new_group_data)
         # submit the form
         wd.find_element_by_xpath(".//*[@id='content']/form[1]/input[22]").click()
         self.contact_cache = None
 
-    def edit_first_contact(self):
+    def edit_random_contact(self, index):
         wd = self.app.wd
-        wd.find_element_by_xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        wd.find_elements_by_xpath(".//table[@id='maintable']/tbody/tr/td[8]/a/img")[index].click()
 
     def open_address_book_page(self):
         wd = self.app.wd
