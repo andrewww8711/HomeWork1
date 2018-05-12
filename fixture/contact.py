@@ -48,8 +48,8 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
-    def modify_first_contact(self):
-        self.modify_contact_by_index(0)
+    def modify_first_contact(self, new_group_data):
+        self.modify_contact_by_index(0, new_group_data)
 
     def modify_contact_by_index(self, index, new_group_data):
         wd = self.app.wd
