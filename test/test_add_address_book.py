@@ -3,8 +3,8 @@ from model.contact import Contact
 
 def test_add_address_book(app):
     old_contact = app.contact.get_contact_list()
-    contact = Contact(firstname="John", lastname="Smith", title="QA Engineer", company="AAA", address="123 main street", homephone="123456", cellphone="1234567",
-                                        email="test@mail.com")
+    contact = Contact(firstname="John", lastname="Smith", title="QA Engineer", company="AAA", address="123 main street",
+                      homephone="123456", cellphone="1234567", workphone="342423234", email="test@mail.com")
     app.contact.create_address_book(contact)
     assert len(old_contact) + 1 == app.contact.count()
     new_contact = app.contact.get_contact_list()
