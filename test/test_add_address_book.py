@@ -19,7 +19,7 @@ def email(prefix, maxlen):
     symbols = string.ascii_letters + "@" + "."
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
-testdata = [Contact(firstname="", lastname="", title="", company="", address="", homephone="", cellphone="", email="")] + [
+testdata = [Contact(firstname="", lastname="", title="", company="", address="", homephone="", cellphone="", email="", email2="", email3="")] + [
         Contact(firstname=random_string("firstname", 10), lastname=random_string("lastname", 10),
                 title=random_string("title", 20), company=random_string("company", 20),address=random_string("address", 20),
                 homephone=random_phone("homephone"), cellphone=random_phone("cellphone"),
