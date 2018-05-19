@@ -11,4 +11,3 @@ def test_delete_address_book(app):
     new_contact = app.contact.get_contact_list()
     old_contact[index:index+1] = []
     assert old_contact == new_contact
-

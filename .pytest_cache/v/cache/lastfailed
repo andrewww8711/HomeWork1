@@ -1,1 +1,8 @@
-{}
+{
+  "test/test_add_address_book.py::test_add_address_book[None:firstname/i3cI!&B:lastname(fG]<LPWJ:titlenH]lx*SLQ:company(hz%Fq(:address:homephone-3-32-0330:cellphone74-5871306:emailEKKIf:email2:email3vvXuOmqKFUTA]": true,
+  "test/test_add_address_book.py::test_add_address_book[None:firstname6.(b\" q:lastname>1 =BQv&:titleu86I!F(5Z7*e{.~k:company2J;fbf 7.:addressO((r2'Xie d#5pZ:homephone1287931-8-:cellphone27-7-3-806:emailHOc:email2ywLUfRYblBcrYk:email3oCgVri]": true,
+  "test/test_add_address_book.py::test_add_address_book[None:firstnameWH:lastnameJ-LYBQ6N:titleyvq:companyZs~32\\\\JRTa_6'Fs:addresst0Et BS8S=1 |GM :homephone1663785454:cellphone1970-89837:emailIPxvjizjiFbFzRcgdkO:email2SXkPvom:email3C]": true,
+  "test/test_add_address_book.py::test_add_address_book[None:firstnameq/Bt':lastnameUL :titlee)^ Q!%*:7dI^:company1;s(t{gNM-{o=:address {l wt(:homephone7449869672:cellphone8--3022346:emailTg:email2LNcTZjTBBYfrbkHfW:email3eFOjPAL@gi]": true,
+  "test/test_create_groups.py::test_homeworkone[None:name<0XBW}&r:headerU5_VRO(}sg:footer%L%; g1=/Ab&V:$~E ;]": true,
+  "test/test_phones.py::test_phons_on_contact_view_page": true
+}
