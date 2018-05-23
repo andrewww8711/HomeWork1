@@ -41,7 +41,7 @@ testdata = [Contact(firstname="", lastname="", title="", company="", address="",
                 title=random_string("title", 20), company=random_string("company", 20),address=random_string("address", 20),
                 homephone=random_phone("homephone"), cellphone=random_phone("cellphone"),
                 email=email("email", 20), email2=email("email2", 20), email3=email("email3", 20))
-        for i in range(5)
+        for i in range(n)
 ]
 
 
