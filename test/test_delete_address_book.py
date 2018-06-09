@@ -1,6 +1,7 @@
 from model.contact import Contact
 from random import randrange
 import random
+import time
 
 def test_delete_address_book(app, db, check_ui):
     if len(db.get_contact_list()) == 0:
@@ -9,6 +10,7 @@ def test_delete_address_book(app, db, check_ui):
     contact = random.choice(old_contact)
     #index = randrange(len(old_contact))
     app.contact.delete_contact_by_id(contact.id)
+    time.sleep(1)
     new_contact = db.get_contact_list()
     assert len(old_contact) - 1 == app.contact.count()
     old_contact.remove(contact)
