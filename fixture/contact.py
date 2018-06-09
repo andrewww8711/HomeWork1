@@ -63,7 +63,6 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
-
     def modify_first_contact(self, new_group_data):
         self.modify_contact_by_index(0, new_group_data)
 
@@ -77,9 +76,24 @@ class ContactHelper:
         wd.find_element_by_xpath(".//*[@id='content']/form[1]/input[22]").click()
         self.contact_cache = None
 
+    def modify_contact_by_id(self, id, new_group_data):
+        wd = self.app.wd
+        self.open_home_page()
+        self.edit_random_contact_by_id(id)
+        # modify contact form
+        self.fill_contact_form(new_group_data)
+        # submit the form
+        wd.find_element_by_xpath(".//*[@id='content']/form[1]/input[22]").click()
+        self.contact_cache = None
+
+
     def edit_random_contact(self, index):
         wd = self.app.wd
         wd.find_elements_by_xpath(".//table[@id='maintable']/tbody/tr/td[8]/a/img")[index].click()
+
+    def edit_random_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector('a[href="edit.php?id=%s"]' % id).click()
 
     def open_address_book_page(self):
         wd = self.app.wd
