@@ -15,4 +15,4 @@ def test_modify_contact_name(app, db, check_ui, json_contacts):
     old_contact[index] = contact
     assert sorted(old_contact, key=Contact.id_or_max) == sorted(new_contact, key=Contact.id_or_max)
     if check_ui:
-        assert sorted(new_contact, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(),key=Contact.id_or_max)
+        assert sorted(new_contact, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(), key=Contact.id_or_max)

@@ -17,4 +17,4 @@ def test_delete_address_book(app, db, check_ui):
     #old_contact[index:index+1] = []
     assert old_contact == new_contact
     if check_ui:
-        assert sorted(new_contact, key=Contact.id_or_max) == sorted(app.contact.get_contact_list, key=Contact.id_or_max)
+        assert sorted(new_contact, key=Contact.id_or_max) == sorted(app.contact.get_contact_list(), key=Contact.id_or_max)
