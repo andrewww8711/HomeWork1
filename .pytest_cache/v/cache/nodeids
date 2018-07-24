@@ -1,20 +1,8 @@
 [
-  "test/test_add_address_book.py::test_add_address_book[None::::::::::]",
-  "test/test_add_address_book.py::test_add_address_book[None:firstnameZk?`P9:lastnamez^q7!k5k:titlePIJL@p:companyl]:address!D!]OywJ?`^Az}dY~ou:homephone5733090549:cellphone52-9379-52:emailYwJ:email2PczGjlRA:email3VjlVjGdyjARGQP.m]",
-  "test/test_add_address_book.py::test_add_address_book[None:firstnameHJh@1S:lastname F4isp|40:title02 %A jwW:company &iw;  Nj*R[D> [$:address4 m7h_lftj:homephone4219699229:cellphone1909211549:emailpuZyigWpxEB:email2pCGNHQf:email3dhHuSuHsdn]",
-  "test/test_add_address_book.py::test_add_address_book[None:firstname#6:lastname[Np:titleej_<(X$d:companyi5,:address:homephone838-4957-0:cellphone2930484130:emailrNgohaS.HoAcQESlClz:email2:email3tFAN]",
-  "test/test_add_address_book.py::test_add_address_book[None:firstname]:lastnameX8R 9UPUE:title 3UsS-/N:S}ws :companyKrjlC`1 q24$:address n(:homephone-5--7642-6:cellphone020680-3-4:emailiw:email2LlnmwKFvzphmx:email3Y@MdhRrHFxoxLk]",
-  "test/test_add_address_book.py::test_add_address_book[None:firstname/PPWa=[:lastnameJ:title\\\\pW @4:company X@7^vrGMx? _ 24:address,rd:homephone58-9315289:cellphone863-30---6:email.f.qmCH@IQlvgeU.B:email2evpdZebZZsiEjs:email3A]",
   "test/test_create_groups.py::test_homeworkone[None:::]",
-  "test/test_create_groups.py::test_homeworkone[None:name4d93,~9}d:header3__@`{e)a4-:footersa] k8e2 ]",
-  "test/test_create_groups.py::test_homeworkone[None:nameK:header+:footerfR{2 Hi(HxK]",
-  "test/test_create_groups.py::test_homeworkone[None:namecx(T~d cn:header##:z:footer]",
-  "test/test_create_groups.py::test_homeworkone[None:name9:headerYCIf<J4KG :footerduNw&]",
-  "test/test_create_groups.py::test_homeworkone[None:name<0XBW}&r:headerU5_VRO(}sg:footer%L%; g1=/Ab&V:$~E ;]",
-  "test/test_delete_address_book.py::test_delete_address_book",
-  "test/test_delete_group.py::test_delete_some_group",
-  "test/test_modify_address_book.py::test_modify_contact_name",
-  "test/test_modify_group_two.py::test_modify_group_name",
-  "test/test_phones.py::test_all_fields_on_home_page",
-  "test/test_phones.py::test_phons_on_contact_view_page"
+  "test/test_create_groups.py::test_homeworkone[None:namezWSSFfLZ:headerJHYzQt:footerxwSuMgjD]",
+  "test/test_create_groups.py::test_homeworkone[None:name0MYO:headerptPuqmrhMRE02bMBx:footer5EL1F2hfJX9]",
+  "test/test_create_groups.py::test_homeworkone[None:nameicaB:headerWCB:footernOYxf2GM]",
+  "test/test_create_groups.py::test_homeworkone[None:nameoiH:header37WGWBKiQhkMm:footerPTf7mjaxp]",
+  "test/test_create_groups.py::test_homeworkone[None:nameiI:headera:footerKp17sMvKZ3g7AUlfbvt]"
 ]

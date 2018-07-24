@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
+import pytest
 
 
 def test_homeworkone(app, db, json_groups, check_ui):
         group = json_groups
+        with py.test.allure.step('Given a group list')
         old_groups = db.get_group_list()
         app.group.create(group)
         # assert len(old_groups) + 1 == app.group.count()
